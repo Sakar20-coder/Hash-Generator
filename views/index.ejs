@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hash Generator</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 5em; }
+    input, button { padding: 0.5em; font-size: 1em; }
+    .hash-output { margin-top: 2em; word-break: break-all; color: #333; }
+  </style>
+</head>
+<body>
+  <h1>🔐 SHA-256 Hash Generator</h1>
+  <form method="POST" action="/hash">
+    <input type="text" name="inputText" placeholder="Enter text" required>
+    <button type="submit">Generate Hash</button>
+  </form>
+
+  <% if (hash) { %>
+    <div class="hash-output">
+      <h3>Resulting Hash:</h3>
+      <code><%= hash %></code>
+    </div>
+  <% } %>
+</body>
+</html>
